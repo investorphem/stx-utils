@@ -1,6 +1,5 @@
 const { StacksTestnet, StacksMainnet } = require('@stacks/network');
-const { broadcastTransaction, makeSTXTokenTransfer } = require('@stacks/transactions');
-const { validateStacksAddress } = require('@stacks/crypto');
+const { broadcastTransaction, makeSTXTokenTransfer, validateStacksAddress } = require('@stacks/transactions');
 
 function stxToMicro(amount) {
   return BigInt(Math.round(amount * 1e6));
