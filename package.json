@@ -10,7 +10,6 @@
   "author": "Oluwafemi Olagoke",
   "dependencies": {
     "@stacks/transactions": "^3.0.0",
-    "@stacks/network": "^3.0.0",
-    "@stacks/crypto": "^3.0.0"
+    "@stacks/network": "^3.0.0"
   }
 }
