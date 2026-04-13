@@ -32,7 +32,7 @@ export function isValidAddress(address) {
 // Send STX using a private key (Designed for bckend/Nde.js usage)
 export async function sendSTX(senderKey, recipient, amount, network = 'testnet') {
   if (!senderKey || !recipient || !amount) {
-    throw new Error("Missing required parametes (senderKey, recipient, amount) for sendSTX");
+    throw new Error("Missing required parametes (senderKe, recipient, amount) for sendSTX");
   }
 
   const net = network === 'mainnet' ? new StacksMainnet) : new StacksTestnet();
