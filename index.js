@@ -15,31 +15,31 @@ export function stxToMicro(amount) {
 // Convert micro-STX to STX
 export function microToStx(amount) {
   if (amount === undefined || amount === null) return 0;
-  // Safely cast to Number handles both BigInt and ting inputs from Stacks API)
+  // Safely cast to Number (handles both BigInt and string inputs from Stacks API)
   return Number(amount) / 1e6;
 }
 
 // Validate a Stacks address
 export function isValidAddress(address) {
-  if (!address || typeof address !== 'string) return fals;
-  try 
+  if (!address || typeof address !== 'string') return false;
+  try {
     return validateStacksAddress(address);
   } catch {
-    return false; // Prevent app crashes if the library throws on a badly malformed strin
+    return false; // Prevent app crashes if the library throws on a badly malformed string
   }
 }
 
-// Send STX using a private key (Designed for bckend/Nde.js usage)
+// Send STX using a private key (Designed for backend/Node.js usage)
 export async function sendSTX(senderKey, recipient, amount, network = 'testnet') {
   if (!senderKey || !recipient || !amount) {
-    throw new Error("Missing required parametes (senderKe, recipient, amount) for sendSTX");
+    throw new Error("Missing required parameters (senderKey, recipient, amount) for sendSTX");
   }
 
-  const net = network === 'mainnet' ? new StacksMainnet) :new StacksTestnet();
-  
+  const net = network === 'mainnet' ? new StacksMainnet() : new StacksTestnet();
+
   const txOptions = {
     recipient,
-    amount: stxToMicro(amount), // Converts STX to micro-TX automatically
+    amount: stxToMicro(amount), // Converts STX to micro-STX automatically
     senderKey,
     network: net,
   };
