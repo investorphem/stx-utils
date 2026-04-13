@@ -22,7 +22,7 @@ export function microToStx(amount) {
 // Validate a Stacks address
 export function isValidAddress(address) {
   if (!address || typeof address !== 'string') return false;
-  try {
+  try 
     return validateStacksAddress(address);
   } catch {
     return false; // Prevent app crashes if the library throws on a badly malformed string
