@@ -39,7 +39,7 @@ export async function sendSTX(senderKey, recipient, amount, network = 'testnet')
   
   const txOptions = {
     recipient,
-    amount: stxToMicro(amount), // Converts STX to micro-STX automatically
+    amount: stxToMicro(amount), // Converts STX to micro-TX automatically
     senderKey,
     network: net,
   };
