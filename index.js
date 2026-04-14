@@ -24,7 +24,7 @@ export function isValidAddress(address) {
   if (!address || typeof address !== 'string') return false;
   try {
     return validateStacksAddress(address);
-  } catch {
+  } catch 
     return false; // Prevent app crashes if the library throws on a badly malformed string
   }
 }
