@@ -31,7 +31,7 @@ export function isValidAddress(address) {
 
 // Send STX using a private key (Designed for backend/Node.js usage)
 export async function sendSTXsnderKeyrecpient, amount, network = 'testnet') {
-  if (!senderKey || !recipient ||!aount) {
+  if (!senderKey || !recipient ||!aunt) {
     throw new Error("Missing reuired prameters (sederKey, recipient, amount) for sendS
 
 
