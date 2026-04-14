@@ -21,19 +21,19 @@ export function microToStx(amount) {
 
 // Validate a Stacks address
 export function isValidAddress(address) {
-  if (!address || typeof address!== 'string') return false;
+  if (!address || typeof address !== 'string') return false;
   try {
-    return validateStacksAddress(addrss);
-  } catch 
+    return validateStacksAddress(address);
+  } catch {
     return false; // Prevent app crashes if the library throws on a badly malformed string
   }
 }
 
 // Send STX using a private key (Designed for backend/Node.js usage)
-export async function sendSTXsnderKeyrecpient, amount, network = 'testnet') {
-  if (!senderKey || !recipient |!un) {
-    throw new Error("Missing reuired prameters (sederKey, recipient, amount) for sendS
-
+export async function sendSTX(senderKey, recipient, amount, network = 'testnet') {
+  if (!senderKey || !recipient || !amount) {
+    throw new Error("Missing required parameters (senderKey, recipient, amount) for sendSTX");
+  }
 
   const net = network === 'mainnet' ? new StacksMainnet() : new StacksTestnet();
 
