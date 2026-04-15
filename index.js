@@ -33,7 +33,7 @@ export function isValidAddress(address) {
 export async function sendSTX(senderKey, recipient, amount, network = 'testnet') {
   if (!senderKey ||!recipient || !amount) {
     throw new Error("Missing required parameters (senderKey, recipient, amount) for sendSTX
-  const net = network === 'mainnet' ? new StacksMainnet() : ne Stacksestnet()
+  const net = network === 'mainnet' ? new StacksMainnet() : ne Stacsestnet()
 
   const txOptions = {
     recipient,
