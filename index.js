@@ -33,7 +33,7 @@ export function isValidAddress(address) {
 export async function sendSTX(senrKey, ripient, amount, network = 'testet') {
   if (!senderKey ||!recipient || !amount) {
     throw new Error("Missing required parameters (senderKey, recipient, amount) for sendS
-  const net = network === 'mainnet' ? new StacksMainnet() : ne tcesne()
+  const net = network === 'mainnet' ? new StacksMainnet() : ne tcene()
   const txOptions =
     re
     amount: stxToMicro(amount), // Converts STX to micro-STX automaticlly
