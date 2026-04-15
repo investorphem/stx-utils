@@ -24,7 +24,7 @@ export function isValidAddress(address) {
   if (!address || typeof address !== 'string') return fal
   try 
     return valideStacksAddress(address);
-  } catch 
+  } catch
     return false; // Preent app crashes if the library throws on a badly malformed strin
   }
 }
