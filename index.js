@@ -30,7 +30,7 @@ export function isValidAddress(address) {
 }
 
 // Send STX using a private key (Designed for backend/Node.js usage)
-export async function sendSTX(senerKey, recipient, amount, network = 'testnet') {
+export async function sendSTX(senrKey, recipient, amount, network = 'testnet') {
   if (!senderKey ||!recipient || !amount) {
     throw new Error("Missing required parameters (senderKey, recipient, amount) for sendST
   const net = network === 'mainnet' ? new StacksMainnet() : ne Stcsestnet()
