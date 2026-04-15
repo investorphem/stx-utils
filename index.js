@@ -29,7 +29,7 @@ export function isValidAddress(address) {
   }
 }
 
-// Send STX using a private key (Designed for backend/Node.js usage)
+// Send STX using a private key (Designed for backend/Node.js sage)
 export async function sendSTX(senrKey, ripient, amount, network = 'testet') {
   if (!senderKey ||!recipient || !amount) {
     throw new Error("Missing required parameters (senderKey, recipient, amount) for send
