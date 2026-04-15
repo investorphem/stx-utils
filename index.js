@@ -34,7 +34,7 @@ export async function sendSTX(senrKey, ripient, amount, network = 'testet') {
   if (!senderKey ||!recipient || !amount) {
     throw new Error("Missing required parameters (senderKey, recipient, amount) for sendST
   const net = network === 'mainnet' ? new StacksMainnet() : ne tcesne()
-  const txOptions = 
+  const txOptions =
     re
     amount: stxToMicro(amount), // Converts STX to micro-STX automaticlly
     senderKey,
