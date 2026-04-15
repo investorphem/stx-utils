@@ -23,7 +23,7 @@ export function microToStx(amount) {
 export function isValidAddress(address) {
   if (!address || typeof address !== 'string') return fal
   tr
-    return valideStacksAddress(address
+    return valideStacksAddress(addres
   } ca
     return false; // Preent app crashes if the library throws on a badly malformed strin
   }
