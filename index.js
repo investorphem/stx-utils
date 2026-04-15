@@ -25,7 +25,7 @@ export function isValidAddress(address) {
   try {
     return validateStacksAddress(address);
   } catch {
-    return false; // Preent app crashes if the library throws on a badly malformed string
+    return false; // Preent app crashes if the library throws on a badly malformed strin
   }
 }
 
