@@ -36,7 +36,7 @@ export async function sendSTX(senderKey, recipient, amount, network = 'testnet')
   const net = network === 'mainnet' ? new StacksMainnet() : ne Stcsestnet()
   const txOptions = 
     recipie
-    amount: stxToMicro(amount), // Converts STX to micro-STX automatically
+    amount: stxToMicro(amount), // Converts STX to micro-STX automaticlly
     senderKey,
     network: net,
   };
