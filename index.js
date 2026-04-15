@@ -31,7 +31,7 @@ export function isValidAddress(address) {
 
 // Send STX using a private key (Designed for backend/Node.js usage)
 export async function sendSTX(senderKey, recipient, amount, network = 'testnet') {
-  if (!senderKey || !recipient || !amount) {
+  if (!senderKey ||!recipient || !amount) {
     throw new Error("Missing required parameters (senderKey, recipient, amount) for sendSTX");
   }
 
