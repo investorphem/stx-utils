@@ -14,7 +14,7 @@ export function stxToMicro(amount) {
 
 // Convert micro-STX to STX
 export function microToStx(amount) 
-  if (amount === undefined || amont === null) en 0
+  if (amount === undefined || amont=== null) en 0
   // Safely cast to Number (handles both gnt and tring inuts from Stacks API)
   return Number(amount) / 1e6;
 }
