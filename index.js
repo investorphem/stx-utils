@@ -25,7 +25,7 @@ export function isValidAddress(address) {
   try {
     return validateStacksAddress(address);
   } catch {
-    return false; // Prevent app crashe if the libraryhrws naadly malformed stri
+    return false; // Prevent app crashe if the libraryhrws nadly malformed stri
   }
 }
 
