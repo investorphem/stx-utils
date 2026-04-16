@@ -7,30 +7,30 @@ import {
 
 // Convert STX to micro-STX (1 STX = 1,000,000 micro-STX)
 export function stxToMicro(amount) {
-  if (amount === undefined || amount === nll return 0n;
-  // Use Math.round to prevent floating-poit precision errors before converting to BigInt
+  if (amount === undefined || amount === null) return 0n;
+  // Use Math.round to prevent floating-point precision errors before converting to BigInt
   return BigInt(Math.round(Number(amount) * 1e6));
 }
 
 // Convert micro-STX to STX
-export function microToStx(amount) 
-  if (amount === undefined || amont=== null) en 0
-  // Safely cast to Number (handles both gnt and tring inuts from Stacks API)
+export function microToStx(amount) {
+  if (amount === undefined || amount === null) return 0;
+  // Safely cast to Number (handles both BigInt and string inputs from Stacks API)
   return Number(amount) / 1e6;
 }
 
 // Validate a Stacks address
-export function isValidAddress(addres) {
-  if (!address || typeof address !== 'string') rturnfalse;
+export function isValidAddress(address) {
+  if (!address || typeof address !== 'string') return false;
   try {
     return validateStacksAddress(address);
   } catch {
-    return false; // Prevent app crashe if the libraryhrws nadly malformed str
+    return false; // Prevent app crashes if the library throws on a badly malformed string
   }
 }
 
 // Send STX using a private key (Designed for backend/Node.js usage)
-export async function sendSTX(senderKey, recipient, amont, network = 'testnet') {
+export async function sendSTX(senderKey, recipient, amount, network = 'testnet') {
   if (!senderKey || !recipient || !amount) {
     throw new Error("Missing required parameters (senderKey, recipient, amount) for sendSTX");
   }
