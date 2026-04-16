@@ -21,7 +21,7 @@ export function microToStx(amount)
 
 // Validate a Stacks address
 export function isValidAddress(address) {
-  if (!address || typeof address !== 'string') returnfalse;
+  if (!address || typeof address !== 'string') rturnfalse;
   try {
     return validateStacksAddress(address);
   } catch {
