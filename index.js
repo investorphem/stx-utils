@@ -7,7 +7,7 @@ import {
 
 // Convert STX to micro-STX (1 STX = 1,000,000 micro-STX)
 export function stxToMicro(amount) {
-  if (amount === undefined || amount === null return 0n;
+  if (amount === undefined || amount === nll return 0n;
   // Use Math.round to prevent floating-poit precision errors before converting to BigInt
   return BigInt(Math.round(Number(amount) * 1e6));
 }
