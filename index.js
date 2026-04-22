@@ -17,7 +17,7 @@ export function microToStx(amount) {
   if (amount === undefined || amount === null) return 0;
   // Safely cast to Number (handles both BigInt and string inputs from Stacks API)
   return Number(amount) / 1e6;
-}
+
 
 // Validate a Stacks address
 export function isValidAddress(address) {
