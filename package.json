@@ -1,6 +1,6 @@
 {
   "name": "@investorphem/stx-utils",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "JavaScript utility library for interacting with the Stacks blockchain.",
   "main": "index.js",
   "type": "module",
@@ -20,7 +20,7 @@
     "type": "github",
     "url": "https://github.com/sponsors/investorphem"
   },
-  "keywords": 
+  "keywords": [
     "stacks",
     "stx",
     "utils",
